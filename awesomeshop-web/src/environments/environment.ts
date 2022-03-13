@@ -8,7 +8,7 @@ export const environment = {
   keycloak: {
     issuer: 'http://localhost:8080/auth',
     realm: 'MiageCorp',
-    clientId: 'awesomecorp-web'
+    clientId: 'awesomeshop-web'
   }
 };
 

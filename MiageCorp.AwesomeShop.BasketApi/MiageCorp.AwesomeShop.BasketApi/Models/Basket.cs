@@ -1,6 +1,6 @@
-﻿namespace MiageCorp.AwesomeShop.Basket.Models
+﻿namespace MiageCorp.AwesomeShop.BasketApi.Models
 {
-    public class UserBasket
+    public class Basket
     {
         public string? UserId { get; set; }
 

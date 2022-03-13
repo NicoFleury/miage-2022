@@ -1,6 +1,6 @@
-﻿using MiageCorp.AwesomeShop.Basket.Models;
+﻿using MiageCorp.AwesomeShop.BasketApi.Models;
 
-namespace MiageCorp.AwesomeShop.Basket.Services
+namespace MiageCorp.AwesomeShop.BasketApi.Services
 {
     public interface IBasketService
     {

@@ -7,10 +7,14 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductComponent } from './components/product/product.component';
 
 const routes: Routes = [
-  { path : '', component: HomeComponent, canActivate: [AuthGuard] },
-  { path : 'basket', component: BasketComponent, canActivate: [AuthGuard]},
-  { path : 'product', component: ProductComponent, canActivate: [AuthGuard]},
-  { path : 'product/:id', component: ProductComponent, canActivate: [AuthGuard]}
+  // { path : '', component: HomeComponent, canActivate: [AuthGuard] },
+  // { path : 'basket', component: BasketComponent, canActivate: [AuthGuard]},
+  // { path : 'product', component: ProductComponent, canActivate: [AuthGuard]},
+  // { path : 'product/:id', component: ProductComponent, canActivate: [AuthGuard]}
+  { path : '', component: HomeComponent },
+  { path : 'basket', component: BasketComponent },
+  { path : 'product', component: ProductComponent},
+  { path : 'product/:id', component: ProductComponent}
 ];
 
 @NgModule({

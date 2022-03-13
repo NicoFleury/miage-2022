@@ -1,10 +1,10 @@
-﻿using MiageCorp.AwesomeShop.Basket.Models;
+﻿using MiageCorp.AwesomeShop.BasketApi.Models;
 
-namespace MiageCorp.AwesomeShop.Basket.Services
+namespace MiageCorp.AwesomeShop.BasketApi.Services
 {
     public class BasketService : IBasketService
     {
-        private static List<UserBasket> _basketList = new List<UserBasket>();
+        private static List<Basket> _basketList = new List<Basket>();
 
         public List<Item> GetBasketContent(string userId)
         {
@@ -20,7 +20,7 @@ namespace MiageCorp.AwesomeShop.Basket.Services
             var basket = _basketList.SingleOrDefault(b => b.UserId == userId);
             if (basket == null)
             {
-                basket = new UserBasket()
+                basket = new Basket()
                 {
                     UserId = userId
                 };

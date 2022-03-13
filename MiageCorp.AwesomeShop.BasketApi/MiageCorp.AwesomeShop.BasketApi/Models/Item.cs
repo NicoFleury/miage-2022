@@ -1,4 +1,4 @@
-﻿namespace MiageCorp.AwesomeShop.Basket.Models
+﻿namespace MiageCorp.AwesomeShop.BasketApi.Models
 {
     public class Item
     {

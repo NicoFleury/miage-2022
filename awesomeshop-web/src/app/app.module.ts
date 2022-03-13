@@ -42,12 +42,12 @@ function initializeKeycloak(keycloak: KeycloakService) {
     KeycloakAngularModule
   ],
   providers: [
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initializeKeycloak,
-      multi: true,
-      deps: [KeycloakService],
-    },
+    // {
+    //   provide: APP_INITIALIZER,
+    //   useFactory: initializeKeycloak,
+    //   multi: true,
+    //   deps: [KeycloakService],
+    // },
 
   ],
   bootstrap: [AppComponent]

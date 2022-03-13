@@ -1,4 +1,5 @@
 ﻿using MiageCorp.AwesomeShop.BackForFront.Models;
+using Newtonsoft.Json;
 using RestSharp;
 
 namespace MiageCorp.AwesomeShop.BackForFront.Services
@@ -15,7 +16,6 @@ namespace MiageCorp.AwesomeShop.BackForFront.Services
 
         public async Task<Product> AddProduct(Product product)
         {
-            product.Id = Guid.NewGuid().ToString();
             RestRequest request = new RestRequest(ressourcePath);
             request.RequestFormat = DataFormat.Json;
             request.AddBody(product);
@@ -24,7 +24,7 @@ namespace MiageCorp.AwesomeShop.BackForFront.Services
             {
                 throw new BackForFrontException(response.StatusCode, response.ErrorMessage);
             }
-            return product;
+            return JsonConvert.DeserializeObject<Product>(response.Content);
         }
 
         public async Task DeleteProduct(string id)
@@ -40,7 +40,8 @@ namespace MiageCorp.AwesomeShop.BackForFront.Services
         public async Task<Product?> GetProductById(string id)
         {
             RestRequest request = new RestRequest($"{ressourcePath}/{id}");
-            return await client.GetAsync<Product>(request);
+            var result = await client.GetAsync<Product>(request);
+            return result?.Id != null ? result : null;
         }
 
         public async Task<List<Product>> GetProducts()

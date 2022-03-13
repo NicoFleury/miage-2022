@@ -1,10 +1,10 @@
-﻿using MiageCorp.AwesomeShop.Basket.Models;
-using MiageCorp.AwesomeShop.Basket.Services;
+﻿using MiageCorp.AwesomeShop.BasketApi.Models;
+using MiageCorp.AwesomeShop.BasketApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace MiageCorp.AwesomeShop.Basket.Controllers
+namespace MiageCorp.AwesomeShop.BasketApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
